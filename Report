@@ -1,0 +1,12 @@
+
+
+I have used stable_baselines3 to train the agent .
+
+I have first started by preprocessing the observations given by the environment (200,256,3) tensor. 
+I convert this into a much more managable (84,84,1) tensor by first converting it to grayscale using opencv and then converted the image into a 84,84 tensor using pooling by opencv.
+Since I realised this might not be a compatible observation space for stable_baselines3 I used numpy to make this a (84,84,1) tensor.
+
+
+After this i changed the reward function of the environment to represent the change in score after that timestep as the original reward function was too sparse.
+
+
